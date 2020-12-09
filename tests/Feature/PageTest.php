@@ -8,13 +8,17 @@ use Tests\TestCase;
 
 class PageTest extends TestCase
 {
-    public function testHome() {
-        $response = $this->get('/');
+	use RefreshDatabase;
 
+    public function testHome() 
+    {
+        $response = $this->get('/');
+        
         $response->assertStatus(200);
     }
 
-    public function testAbout() {
+    public function testAbout() 
+    {
         $response = $this->get('about');
         
         $response->assertStatus(200);
