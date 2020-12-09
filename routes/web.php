@@ -25,3 +25,5 @@ Route::get('about', function () {
 
 Route::view('profile', 'profile');
 Route::post('profile', [App\Http\Controllers\ProfileController::class, 'upload']);
+
+Route::post('tags', [App\Http\Controllers\TagController::class, 'store']);
